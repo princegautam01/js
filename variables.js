@@ -68,3 +68,9 @@ arr.pop(); // removes the last element
 console.log(arr)
 arr.shift(); // removes the first element
 console.log(arr)
+
+// Typof
+console.log(typeof("Hello")) // String
+console.log(typeof(undefined)) // undefined
+console.log(typeof(56))//number
+console.log(typeof(null))//object
