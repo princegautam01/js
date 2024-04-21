@@ -74,3 +74,21 @@ console.log(typeof("Hello")) // String
 console.log(typeof(undefined)) // undefined
 console.log(typeof(56))//number
 console.log(typeof(null))//object
+
+
+//Symbol (Used for security)
+let data = 100;
+console.log(data) //100
+
+let data2 = Symbol(200)
+console.log(data2)
+
+// Json object
+const obj = {
+   "sub_one":"JavaScript"
+   ,"sub_two":"mongoDB"
+}
+//obj = {} //TypeError: Assignment to constant variable.
+console.log(obj)
+obj.sub_one = "Reactjs"
+console.log(obj)

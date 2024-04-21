@@ -1,0 +1,138 @@
+<!-- Functions -->
+<!-- business logic is called "function" -->
+<!-- functions are used to reuse the business logic -->
+<!-- we use "function " keyword to define a function -->
+<!-- we have following types of functions -->
+<!-- 1. Named Function -->
+<!-- 2.Anonymous function /Nameless Function/Arrow function/callback function/fat arrow function  -->
+<!-- 3.Rest parameters in function -->
+<!-- 4.Default parameters in function -->
+<!-- 5.Optional parameters in function-->
+<!-- 6.Generators -->
+<!-- 7.Immidiate invokable functional expression (IIFE) -->
+<!-- 8.Constructor Functions -->
+
+<!--               Syntax
+                   ******
+    function defination
+    ******************** 
+    function functionName(args1 , args2 , args3 ...........argsN){
+        // business logics
+    }
+   
+    function calling
+    ****************
+    fucntionName(param1,param2......paramN);
+
+-->
+<!-- <script>
+  function fun_one(){
+    return "Hello World!"
+  }
+
+  console.log(fun_one())    // Hello World!
+  console.log(fun_one)     // Function Defination
+
+</script> -->
+
+<!-- <script>
+    function fun_one(args1,args2,args3){
+        console.log(args1 , args2 ,args3)
+    }
+
+    fun_one("javascript" , "Reactjs" ,"mongoDB");
+    fun_one()//undefined undefined undefined
+    fun_one(null , null , null) // null null null
+    fun_one(undefined , undefined , "hello")
+</script> -->
+
+
+<!-- <script>
+    function fun_one()
+    {
+        return fun_two
+    }
+
+    function fun_two(){
+        return "Hello"
+    }
+
+    //console.log(fun_one()()) // fun_two defination
+    console.log(fun_one()()) 
+</script> -->
+
+<!-- <script>
+  let arr = []
+  function fun_one()
+  {
+    return "Hello"
+  }
+
+  for(let i=0;i<5;i++){
+    arr.push(fun_one())
+  }
+
+  //console.log(arr) 
+
+  for(let j=0;j<arr.length;j++)
+  {
+    //console.log(arr[j])  //5Hello
+    console.log(arr[j]()) // Error 
+  }
+</script> -->
+
+<!-- setTimeout -->
+<!-- <script>
+  function fun_one(){
+    return "Hello"
+  }
+
+  setTimeout(function(){  //return the output after 5sec
+    console.log(fun_one())
+  } , 5000)
+
+</script> -->
+
+<!-- <script>
+ function fun_one(){
+    return "Hello"
+ }
+
+ setInterval(function(){
+    console.log(fun_one())   //return infinite output in an interval of 2sec
+ },2000)
+
+</script> -->
+
+<!-- <script>
+for(let i=0;i<5;i++){          //let=>0
+    setTimeout(function(){          //1
+        console.log(i)              //2 
+    },5000)                         //3
+}                                   //4
+</script> -->
+
+<!-- <script>
+    for(var i =0;i<5;i++){
+       setTimeout(function(){
+        console.log(i) 
+       },5000)           //var=> 5 5 5 5 5
+    }
+</script> -->
+<!-- Rest parameters in functions 
+     1. We can only take one Spread operator per function
+     2. position of spread operator should be last in occurance
+
+-->
+<script>
+    //Spread operator(...)ES6
+    function fun_one(...args1){
+      console.log(args1)
+    }
+    fun_one("Hello1" ,"Hello2")
+    fun_one("Hello1" ,"Hello2" ,"Hello3")
+    fun_one() // Default value is []
+
+    //function fun_two(...args1,...args2){} ERROR
+    function fun_two(args2,...args1){} // spread operator in the last
+</script>
