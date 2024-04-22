@@ -150,3 +150,104 @@ fun_one(null , null);    // null , null
 
 
 </script> -->
+
+<!-- <script>
+
+function fun_one(args1,args2,...args3)
+{
+  console.log(args1,args2, args3);
+}
+
+fun_one(); // undefined , undefined , []
+fun_one(null , null , null); // null , null , [null] (null at zero index)
+fun_one("Hello_1" , undefined , "Hello1") // Hello_1 , undefined , [Hello1]
+</script> -->
+
+<!-- 
+                         Arrow Function
+                         **************
+    1. The function without any name is called Anonymous function
+    2. Anonymous function is also called as "Arrow function"
+    3. Arrow Function is a Callable Function
+    4. Arrow Function is represented by "=>" operator
+    5. Arrow Function is introduced in ES6
+
+
+ -->
+
+
+ <!-- <script>
+  let fun_one = ()=> console.log("Hello"); // No need of braces for one line
+  fun_one(); // Hello
+</script> -->
+
+<!-- <script>
+  let fun_one = (args1 , args2)=>{
+    console.log(args1,args2);
+  }
+
+  fun_one(undefined , "Hello"); // undefined , Hello
+</script> -->
+
+<!-- <script>
+  let fun_one = ()=>{
+     return "Hello";
+  }
+  console.log(fun_one); // def
+  console.log(fun_one()); // Hello 
+</script> -->
+
+<!-- <script>
+  let fun_one = (args1,args2, args3)=>{
+    //console.log(args1) // def
+    console.log(args1() , args2(), args3()); // Hello1,Hello2,Hello3
+  }
+
+  fun_one(()=>{
+    return "Hello1"
+  }, ()=>{
+    return "Hello2"
+  } ,()=>{
+    return "Hello3"
+  })
+</script> -->
+
+<script>
+  let fun_one = (user , getElementsByEmail , getElementsByID)=>{
+           console.log(user , getElementsByEmail() , getElementsByID());
+  }
+
+  let getElementsByEmail = ()=>{
+    return "prince@gmail.com";
+  }
+  let getElementsByID = ()=>{
+    return "Prince@123"
+  }
+  fun_one("Prince" , getElementsByEmail , getElementsByID);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
