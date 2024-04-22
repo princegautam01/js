@@ -124,7 +124,7 @@ for(let i=0;i<5;i++){          //let=>0
      2. position of spread operator should be last in occurance
 
 -->
-<script>
+<!-- <script>
     //Spread operator(...)ES6
     function fun_one(...args1){
       console.log(args1)
@@ -135,4 +135,18 @@ for(let i=0;i<5;i++){          //let=>0
 
     //function fun_two(...args1,...args2){} ERROR
     function fun_two(args2,...args1){} // spread operator in the last
-</script>
+</script> -->
+
+
+<!-- Default argument Function -->
+<!-- <script>
+function fun_one(args1 , args2 = "Hello"){
+  console.log(args1,args2);                         
+}
+fun_one();  // undefined , Hello
+fun_one(undefined);   // undefined , Hello
+fun_one(undefined , undefined); // undefined , Hello
+fun_one(null , null);    // null , null
+
+
+</script> -->
