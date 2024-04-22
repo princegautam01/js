@@ -212,7 +212,7 @@ fun_one("Hello_1" , undefined , "Hello1") // Hello_1 , undefined , [Hello1]
   })
 </script> -->
 
-<script>
+<!-- <script>
   let fun_one = (user , getElementsByEmail , getElementsByID)=>{
            console.log(user , getElementsByEmail() , getElementsByID());
   }
@@ -224,10 +224,20 @@ fun_one("Hello_1" , undefined , "Hello1") // Hello_1 , undefined , [Hello1]
     return "Prince@123"
   }
   fun_one("Prince" , getElementsByEmail , getElementsByID);
+</script> -->
+
+
+                  <!-- Immidiate Invokable Function Expression (IIFE) -->
+<!-- 1.These function are called self invokable function
+     2.No Function Calling is required
+     3.Introduced in ES9
+-->
+<script>
+  (()=>{
+    console.log("Welcome to IIFE");
+  })();
+
 </script>
-
-
-
 
 
 
