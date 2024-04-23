@@ -1,3 +1,5 @@
+                         <h1>WE ARE LEARNING ABOUT JAVASCRIPT FUNCTIONS</h1>
+
 <!-- Functions -->
 <!-- business logic is called "function" -->
 <!-- functions are used to reuse the business logic -->
@@ -365,7 +367,7 @@ console.log(obj1.var1);
   console.log(obj1.var1);
   console.log(obj1.my_fun());
 </script> -->
- <script>
+ <!-- <script>
   function class_one(){
      
   };
@@ -379,16 +381,114 @@ console.log(obj1.var1);
 
   let obj1 = new class_two();
   console.log(obj1.var1 , obj1.var2);
- </script>
+ </script> -->
+ 
+ <!-- <script>
+     function class_one(){}; // one function
+     class_one.prototype.my_fun1 = function(){
+      return "javascript";
+     }
+
+
+     function class_two(){}; //  two function
+     class_two.prototype = Object.create(class_one.prototype);
+     class_two.prototype.my_fun2 = function(){
+      return "reactjs";
+     }
+     
+     function class_three(){}; // three function
+     class_three.prototype = Object.create(class_two.prototype);
+     class_three.prototype.my_fun3 = function(){
+      return "MongoDB";
+     }
+
+     let obj1 = new class_three();
+     console.log(
+      obj1.my_fun1(),
+      obj1.my_fun2(),
+      obj1.my_fun3()
+    )
+
+ </script> -->
+
+ <!-- <script>
+  function class_one(){};
+  class_one.prototype.db = function(){
+    return "Welcome to Orcale DB"
+  }
+  function class_two(){};
+  class_two.prototype = Object.create(class_one.prototype);
+  class_two.prototype.db = function(){   // this function will override the above function
+    return "Welcome to MongoDB DB"
+  }
+  let obj1 = new class_two();
+  console.log(obj1.db())
+ </script> -->
+
+
+                              <!--  Generators  -->
+<!--                           ********************
+                     1.Generators controls the statements in a function
+                     2.Generators should have "*"
+                     3.Every statments should have "yeild" statement
+                     4.Generator use "cursor" mechanism
+                     5.By using cursor we can control statements
+   -->
+
+<!-- <script>
+  function *my_fun(){
+    yield "javascript"
+    yield "reactjs"
+    yield "mongoDB"
+    yield "nodejs"
+  }
+  let cursor = my_fun();
+  console.log(cursor.next())
+  console.log(cursor.next())
+  console.log(cursor.next())
+  console.log(cursor.next())
+  console.log(cursor.next()) // undefined and true
+</script> -->
 
 
 
+<!-- <script>
+  function *my_fun(){
+    yield "100"
+    yield "200"
+    yield "300"
+    return "400"
+    yield "500"  // after return statement no line will execute
+  }
+  let cursor = my_fun();
+  console.log(cursor.next())
+  console.log(cursor.next())
+  console.log(cursor.next())
+  console.log(cursor.next())
+  console.log(cursor.next())  // here we get undefined and true
+</script> -->
 
 
+<script>
+  function *my_fun1(){
+    yield "100"
+    yield *my_fun2()
+    yield *my_fun3()
+    yield "400"
+  }
+  function *my_fun2(){
+    yield "200"
+  }
 
+  function *my_fun3(){
+    yield "300"
+  }
 
-
-
+  let cursor = my_fun1();
+  for(let i = 0;i<4;i++){
+    console.log(cursor.next())
+  }
+</script>
 
 
 
