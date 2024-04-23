@@ -295,6 +295,116 @@ fun_one("Hello_1" , undefined , "Hello1") // Hello_1 , undefined , [Hello1]
    console.log(obj1.var1 , obj1.var2);
   </script> -->
 
+<!-- <script>
+
+  function class_one(){
+    this.wish = "JavaScript";
+    this.my_fun = function(){
+      return `Welcome to ${this.wish}`
+    };
+  };
+  let obj1 = new class_one();
+  console.log(obj1.wish);
+  console.log(obj1.my_fun());
+</script> -->
+
+<!-- <script>
+
+   function class_one(){
+    this.sub1 = "JavaScript";
+    this.sub2 = "Reactjs";
+    this.sub3 = "MongoDB";
+
+    this.my_fun1 = function(){
+      return this.sub1
+    };
+    this.my_fun2 = function(){
+      return this.sub2
+    };
+    this.my_fun3 = function(){
+      return this.sub3
+    };
+
+   };
+
+   let obj1 = new class_one();
+   console.log(obj1.my_fun1() , obj1.my_fun2() , obj1.my_fun3());
+</script> -->
+<!-- 
+<script>
+  function class_one(args1 , args2 , args3){
+          this.var1 = args1;
+          this.var2 = args2;
+          this.var3 = args3;
+  };
+  let obj1 = new class_one("Reactjs" , "javascript" , "MongoDB");
+  console.log(obj1.var1 , obj1.var2 , obj1.var3);
+  let obj2 = new class_one("java" , "python" , "C++");
+  console.log(obj2.var1 , obj2.var2 , obj2.var3);
+</script> -->
+<!-- 
+<script>
+function class_one(){
+
+};
+class_one.prototype.var1 = "javascript";
+let obj1 = new class_one();
+console.log(obj1.var1);
+
+</script> -->
+
+<!-- <script>
+  function class_one(){
+
+  };
+  class_one.prototype.var1 = "Reactjs";
+  class_one.prototype.my_fun = function(){
+    return `We will learn reactjs`;
+  }
+  let obj1 = new class_one();
+  console.log(obj1.var1);
+  console.log(obj1.my_fun());
+</script> -->
+ <script>
+  function class_one(){
+     
+  };
+  class_one.prototype.var1="javascript";
+  function class_two(){
+
+  };
+  class_two.prototype = Object.create(class_one.prototype);
+  class_two.prototype.var2 = "reactjs";
+ 
+
+  let obj1 = new class_two();
+  console.log(obj1.var1 , obj1.var2);
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
