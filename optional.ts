@@ -25,9 +25,19 @@
                         => tsc demo.ts
                         =>node demo.js
 */
-function my_fun(args1?:String , args2?:String):void{
+
+
+/*function my_fun(args1?:String , args2?:String):void{
     console.log(args1,args2)
-}
+}*/
 //my_fun();  // undefined undefined
 //my_fun("Hello1") // Hello1 , undefined
 //my_fun(null,null) // null null
+
+
+
+function my_fun(args1 , args2?:String):void{
+    console.log(args1, args2)
+}
+//my_fun();  // Error Excepted one argument but got zero
+my_fun("Hello2")   //undefined Hello2
