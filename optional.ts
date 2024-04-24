@@ -36,8 +36,15 @@
 
 
 
-function my_fun(args1 , args2?:String):void{
+/*function my_fun(args1 , args2?:String):void{
     console.log(args1, args2)
 }
 //my_fun();  // Error Excepted one argument but got zero
 my_fun("Hello2")   //undefined Hello2
+*/
+
+
+function my_fun(args1:any , args2:any="Hello2" , ...args3:any[]):any{
+              console.log(args1,args2,args3)
+}
+//my_fun(undefined , undefined , undefined)  // undefined , Hello2 , [undefined]
