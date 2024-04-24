@@ -44,7 +44,9 @@ my_fun("Hello2")   //undefined Hello2
 */
 
 
-function my_fun(args1:any , args2:any="Hello2" , ...args3:any[]):any{
-              console.log(args1,args2,args3)
+function my_fun(args1:any , args2:any="Hello2",args3?:any , ...args4:any[]):any{
+              console.log(args1,args2,args3 , args4)
 }
 //my_fun(undefined , undefined , undefined)  // undefined , Hello2 , [undefined]
+//my_fun("Hello1")  // Hello1 Hello2 undefined , []
+my_fun(null , null , null , null )  // null , null , null , [null]

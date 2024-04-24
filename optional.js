@@ -37,12 +37,14 @@
 //my_fun();  // Error Excepted one argument but got zero
 my_fun("Hello2")   //undefined Hello2
 */
-function my_fun(args1, args2) {
+function my_fun(args1, args2, args3) {
     if (args2 === void 0) { args2 = "Hello2"; }
-    var args3 = [];
-    for (var _i = 2; _i < arguments.length; _i++) {
-        args3[_i - 2] = arguments[_i];
+    var args4 = [];
+    for (var _i = 3; _i < arguments.length; _i++) {
+        args4[_i - 3] = arguments[_i];
     }
-    console.log(args1, args2, args3);
+    console.log(args1, args2, args3, args4);
 }
-my_fun(undefined, undefined, undefined); // undefined , Hello2 , []
+//my_fun(undefined , undefined , undefined)  // undefined , Hello2 , [undefined]
+//my_fun("Hello1")  // Hello1 Hello2 undefined , []
+my_fun(null, null, null, null); // null , Hello2 , null , [null]
