@@ -80,7 +80,22 @@
     })
 </script> -->
 
+<script>
+    function fun_one(args1){
+         return args1(fun_three)
+    }
 
+    function func_two(args1){
+         return args1("Hello")
+    }
+    function fun_three(args1){
+          console.log(args1)
+    }
+
+    fun_one(func_two)
+
+
+</script>
 
 
 
