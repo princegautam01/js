@@ -51,7 +51,7 @@
     }
 </script> -->
 
-<script>
+<!-- <script>
     let my_function = {
         "money":{"amount":1000},
         "book":{"company":"react"},
@@ -66,4 +66,36 @@
 
     console.log(amount,company,weight,brand);
 
+</script> -->
+
+
+
+<script>
+    let arr = [
+        {"emp_id":101 , "emp_Name":"John" , "emp_Sal":1000},
+        {"emp_id":102 , "emp_Name":"Alex" , "emp_Sal":1500},
+        {"emp_id":101 , "emp_Name":"Annie" , "emp_Sal":3000},
+        {"emp_id":101 , "emp_Name":"Ashley" , "emp_Sal":1200},
+    ];
+    document.write(
+        `<table border = "1"
+                cellpadding="10px"
+                cellspacing="10px"
+                align="center"     >
+                
+           <tr>
+               <th>Emp_ID</th>
+               <th>Emp_Name</th>
+               <th>Emp_Salary</th>
+           </tr>     
+    `);
+    arr.forEach((rec)=>{
+        document.write(
+            `<tr>
+                <td>${rec.emp_id}</td>
+                <td>${rec.emp_Name}</td>
+                <td>${rec.emp_Sal}</td>
+             </tr>`
+        );
+    });
 </script>
