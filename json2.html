@@ -33,10 +33,37 @@
 </script> -->
 
 
-<script>
+<!-- <script>
     let obj = {
         "key1":"Reactjs",
-        "Key2":"Nodejs"
+        "Key2":"Nodejs",
+        "key3":"MongoDB"
     };
     console.log(obj);
+    console.log(obj.key1,obj.Key2,obj.key3);
+    console.log(obj["key1"] , obj["Key2"] , obj["key3"]);
+    let{key1,key2,key3} = obj;
+    console.log(key1,key2,key3);
+
+
+    for(key in obj){
+        console.log(obj[key]);
+    }
+</script> -->
+
+<script>
+    let my_function = {
+        "money":{"amount":1000},
+        "book":{"company":"react"},
+        "gold":{"weight":"1grm"},
+        "pen":{"brand":"reynolds"}
+    };
+    let{money,book,gold,pen}=my_function;
+    let{amount}=money;
+    let{company}=book;
+    let{weight}=gold;
+    let{brand}=pen;
+
+    console.log(amount,company,weight,brand);
+
 </script>
