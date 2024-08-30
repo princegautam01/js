@@ -18,10 +18,51 @@
 </script> -->
 
 
-<script>
+<!-- <script>
     let obj = {"key1":"Hello1" , "key2":"Hello2" , "key3":"Hello3"};
-    console.log(obj.hasOwnProperty("key1"));
-    console.log(obj.hasOwnProperty("key2"));
-    console.log(obj.hasOwnProperty("key3"));
-    console.log(obj.hasOwnProperty("key4"));
+    console.log(obj.hasOwnProperty("key1"));   //true
+    console.log(obj.hasOwnProperty("key2"));   //true
+    console.log(obj.hasOwnProperty("key3"));   //true
+    console.log(obj.hasOwnProperty("key4"));   //false
+</script> -->
+
+
+<!-- <script>
+    let obj = {
+        "key1":"Hello"
+    };
+    Object.keys(obj).length==0 ? console.log("Empty"):console.log("Not Empty");   // Not Empty
+
+    let obj1 = {};
+    Object.keys(obj1).length==0 ? console.log("Empty"):console.log("Not Empty");  // Empty
+</script> -->
+
+
+<!-- <script>
+    let obj = {
+        "key1":"Reactjs",
+        "Key2":"Nodejs",
+        "key3":"MongoDB"
+    };
+    for(key in obj)
+    {
+        if(obj.hasOwnProperty(key)){                    Not Solved
+            console.log("Not Empty");
+            break;
+        }
+        else{
+            console.log("Empty");
+        }
+    }
+</script> -->                                        
+
+
+<script>
+    let obj = {
+        "a":"b",
+        "c":"d",
+        "e":"f"
+    };
+    let arr = Object.entries(obj);
+    console.log(arr);
 </script>
